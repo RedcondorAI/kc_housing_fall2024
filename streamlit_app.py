@@ -55,7 +55,7 @@ if st.button("Predict Price"):
 
     # API request
     try:
-        response = requests.post("http://159.65.184.142:8002/predict", json=payload)
+        response = requests.post("http://127.0.0.1:8000/predict", json=payload)
         if response.status_code == 200:
             result = response.json()
             st.success(f"Predicted House Price: ${result['prediction']:,.2f}")
